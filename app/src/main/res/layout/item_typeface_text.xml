@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.example.android.downloadablefonts.data.TypefaceText" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{item.text}"
+            android:textAppearance="?android:textAppearanceLarge"
+            tools:text="text" />
+
+        <TextView
+            android:id="@+id/text_typeface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:text="@{item.typeface}"
+            android:textAppearance="?android:textAppearanceSmall"
+            tools:text="typeface" />
+
+        <TextView
+            android:id="@+id/text_loading_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_typeface"
+            android:layout_alignParentEnd="true"
+            android:text="@{String.valueOf(item.loadingState)}"
+            android:textAppearance="?android:textAppearanceSmall"
+            tools:text="state" />
+    </RelativeLayout>
+</layout>

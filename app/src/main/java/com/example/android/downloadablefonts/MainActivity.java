@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         autoCompleteFamilyName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int start, int count,
-                    int after) {
+                                          int after) {
                 // No op
             }
 
@@ -243,6 +243,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Converts progress from a SeekBar to the value of width.
+     *
      * @param progress is passed from 0 to 100 inclusive
      * @return the converted width
      */
@@ -252,6 +253,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Converts progress from a SeekBar to the value of weight.
+     *
      * @param progress is passed from 0 to 100 inclusive
      * @return the converted weight
      */
@@ -267,6 +269,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Converts progress from a SeekBar to the value of italic.
+     *
      * @param progress is passed from 0 to 100 inclusive.
      * @return the converted italic
      */
