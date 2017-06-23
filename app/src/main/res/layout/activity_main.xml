@@ -14,33 +14,47 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <include layout="@layout/bottom_sheet_font_query" />
+    <data>
 
-    <LinearLayout
-        android:id="@+id/textview_area"
-        android:orientation="vertical"
+        <variable
+            name="activity"
+            type="com.example.android.downloadablefonts.MainActivity" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_medium" >
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textview"
+        <include
+            layout="@layout/bottom_sheet_font_query"
+            app:activity="@{activity}" />
+
+        <LinearLayout
+            android:id="@+id/textview_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/downloadable_font_applied_text"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/downloadable_font_applied_text"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
-        android:visibility="gone" />
-</android.support.design.widget.CoordinatorLayout>
+            android:layout_gravity="top|center_horizontal"
+            android:visibility="gone" />
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

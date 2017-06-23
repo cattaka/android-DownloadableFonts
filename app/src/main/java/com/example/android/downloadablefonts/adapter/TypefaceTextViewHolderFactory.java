@@ -25,6 +25,7 @@ public class TypefaceTextViewHolderFactory extends ScrambleAdapter.AbsViewHolder
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ScrambleAdapter<?> adapter, @NonNull ViewGroup parent, @NonNull ForwardingListener<ScrambleAdapter<?>, RecyclerView.ViewHolder> forwardingListener) {
         ViewHolder holder = new ViewHolder(ItemTypefaceTextBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
+        holder.itemView.setOnClickListener(forwardingListener);
         return holder;
     }
 

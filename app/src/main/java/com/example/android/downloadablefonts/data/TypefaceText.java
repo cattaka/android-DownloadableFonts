@@ -34,6 +34,7 @@ public class TypefaceText {
     }
 
     public enum LoadingState {
+        INIT,
         LOADING,
         SUCCEED,
         FAILED

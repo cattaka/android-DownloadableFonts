@@ -16,6 +16,8 @@
 
 package com.example.android.downloadablefonts;
 
+import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -38,6 +40,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.downloadablefonts.databinding.ActivityMainBinding;
+
 import java.util.Arrays;
 
 import static com.example.android.downloadablefonts.Constants.ITALIC_DEFAULT;
@@ -52,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Handler mHandler = null;
 
+    private ActivityMainBinding mBinding;
     private TextView mDownloadableFontTextView;
     private SeekBar mWidthSeekBar;
     private SeekBar mWeightSeekBar;
@@ -64,7 +69,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        mBinding.setActivity(this);
 
         initializeSeekBars();
         mFamilyNameSet = new ArraySet<>();
@@ -275,5 +281,10 @@ public class MainActivity extends AppCompatActivity {
      */
     private float progressToItalic(int progress) {
         return (float) progress / 100f;
+    }
+
+    public void onClickTypefaceList(View view) {
+        Intent intent = new Intent(this, TypefaceListActivity.class);
+        startActivity(intent);
     }
 }

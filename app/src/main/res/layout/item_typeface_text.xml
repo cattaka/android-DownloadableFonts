@@ -14,11 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="?android:selectableItemBackground"
         android:padding="8dp">
 
         <TextView
             android:id="@+id/text"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{item.text}"
             android:textAppearance="?android:textAppearanceLarge"
@@ -26,7 +27,7 @@
 
         <TextView
             android:id="@+id/text_typeface"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text"
             android:text="@{item.typeface}"
@@ -35,7 +36,7 @@
 
         <TextView
             android:id="@+id/text_loading_state"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/text_typeface"
             android:layout_alignParentEnd="true"
