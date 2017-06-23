@@ -1,5 +1,7 @@
 package com.example.android.downloadablefonts.data;
 
+import android.graphics.Typeface;
+
 /**
  * Created by cattaka on 17/06/23.
  */
@@ -8,6 +10,15 @@ public class TypefaceText {
     private String typefaceName;
     private String text;
     private LoadingState loadingState;
+    private Typeface typeface;
+
+    public Typeface getTypeface() {
+        return typeface;
+    }
+
+    public void setTypeface(Typeface typeface) {
+        this.typeface = typeface;
+    }
 
     public String getTypefaceName() {
         return typefaceName;

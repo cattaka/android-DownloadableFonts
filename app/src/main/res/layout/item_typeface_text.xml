@@ -13,8 +13,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="?android:selectableItemBackground"
+        android:orientation="vertical"
         android:padding="8dp">
 
         <TextView
@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:text="@{item.text}"
             android:textAppearance="?android:textAppearanceLarge"
+            android:typeface="@{item.typeface}"
             tools:text="text" />
 
         <TextView
