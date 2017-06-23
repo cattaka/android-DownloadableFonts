@@ -5,16 +5,16 @@ package com.example.android.downloadablefonts.data;
  */
 
 public class TypefaceText {
-    private String typeface;
+    private String typefaceName;
     private String text;
     private LoadingState loadingState;
 
-    public String getTypeface() {
-        return typeface;
+    public String getTypefaceName() {
+        return typefaceName;
     }
 
-    public void setTypeface(String typeface) {
-        this.typeface = typeface;
+    public void setTypefaceName(String typefaceName) {
+        this.typefaceName = typefaceName;
     }
 
     public String getText() {

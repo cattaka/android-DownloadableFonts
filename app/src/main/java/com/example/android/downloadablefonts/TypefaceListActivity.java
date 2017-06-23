@@ -44,7 +44,7 @@ public class TypefaceListActivity extends AppCompatActivity {
         String[] familyNames = context.getResources().getStringArray(R.array.family_names);
         for (String familyName : familyNames) {
             TypefaceText item = new TypefaceText();
-            item.setTypeface(familyName);
+            item.setTypefaceName(familyName);
             item.setLoadingState(TypefaceText.LoadingState.INIT);
             items.add(item);
         }

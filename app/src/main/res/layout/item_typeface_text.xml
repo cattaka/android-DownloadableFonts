@@ -30,9 +30,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text"
-            android:text="@{item.typeface}"
+            android:text="@{item.typefaceName}"
             android:textAppearance="?android:textAppearanceSmall"
-            tools:text="typeface" />
+            tools:text="typefaceName" />
 
         <TextView
             android:id="@+id/text_loading_state"
